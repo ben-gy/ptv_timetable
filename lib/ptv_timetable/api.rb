@@ -14,7 +14,7 @@ module PtvTimetable
     end
 
     def health_check(timestamp=Time.now.utc.iso8601)
-      signed_request("/v2/healthcheck?timestamp=#{timestamp}")
+      signed_request("/v2/healthcheck?timestamp=#{timestamp}").to_s
     end
 
     def near_me(latitude, longitude)
